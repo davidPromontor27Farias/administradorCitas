@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de citas</title>
+    <link rel="stylesheet" href="/build/css/app.css">  
+</head>
+<body>
+    <div class="logotipo">
+        <h1 class="titulo">Hospital Privado <span class="santa"> Santa</span><span class="monica">Monica</span> </h1>
+    </div>
+    
+    
+    <main class="contenedor contenedor-administrador">
+        <div class="contenedor-citas">
+            <div class="datos-paciente">
+                <h2 class="title-paciente">Datos del paciente:</h2>
+                <form action="" class="formulario">
+
+                    <div class="campo">
+                        <label for="nombre">Nombre del Paciente:</label>
+                        <div class="input-campo">
+                           <input type="text" name="nombre" id="nombre" placeholder="Nombre del paciente">
+                        </div>  
+                    </div>
+                    <div class="campo">
+                        <label for="familiar">Familiar Encargado:</label>
+                        <div class="input-campo">
+                            <input type="text" name="familiar" id="familiar" placeholder="Familiar encargado">
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label for="telefono">Numero de telefono:</label>
+                        <div class="input-campo">
+                            <input type="number" name="telefono" id="telefono" placeholder="Numero de telefono">
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label for="fecha">Fecha de entrada:</label>
+                        <div class="input-campo">
+                            <input type="date" id="fecha" name="fecha" placeholder="Ingrese la fecha de entrada">
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label for="Hora">Hora:</label>
+                        <div class="input-campo">
+                            <input type="time" id="hora" name="hora" placeholder="Ingrese la hora de entrada">
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label for="sintomas">Sintomas:</label>
+                        <div class="textarea">
+                            <textarea name="sintomas" id="sintomas"></textarea>
+                        </div>
+                    </div>
+                    <div class="btnBorrar">
+                        <button type="submit" class="boton-crear">Crear cita</button>
+                    </div>
+
+                </form>
+                
+                
+            </div>
+
+            <div class="administrador-citas">
+                <h2 class="title-paciente">Citas registradas</h2>
+                <ul class="citas-registradas" id="citas">
+                 
+                </ul>
+                
+            </div>
+        </div>
+    </main>
+
+
+
+    
+
+    <script src="/build/js/bundle.min.js" type="module"></script>
+</body>
+</html>
