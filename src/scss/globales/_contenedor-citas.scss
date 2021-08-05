@@ -1,0 +1,180 @@
+body{
+
+    font-family: $fuente-principal;
+    background-image: linear-gradient(-225deg, #9b1f5d 0%, #D41872 52%, #00ccff 100%);
+  
+
+
+    .logotipo{
+        max-width: 100rem;
+        width: 80%;
+        margin: 0 auto;
+        background-color: rgb(226, 217, 217, .3);
+        border-radius: .5rem;
+        
+        @include tablet{
+            max-width: 45rem;            
+        }
+        
+        .titulo{
+            margin-top: 4rem;
+            font-size: 2.5rem;
+            padding: 1rem;
+            text-align: center;
+            color: $White;
+
+        }
+        .santa, .monica{
+            text-transform: uppercase;
+            color: rgb(233, 193, 15)
+        }
+        .monica{
+            color:rgb(15, 221, 248)
+        }
+    }
+}
+
+
+.contenedor-administrador{
+   
+    height: auto;
+    background-color: rgba(223, 215, 215, .2);
+    border-radius: .5rem;
+    -webkit-box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(126, 58, 58, 0.3);
+
+
+}
+.contenedor-citas{
+    padding: 3rem;
+
+    @include tablet{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);    
+    }
+   
+    
+}
+.title-paciente{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: $White;
+}
+.formulario{
+    padding-top: 3rem;
+}
+.datos-paciente{
+    
+    .campo{
+
+
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        align-items: flex-start;
+        
+       
+        @include tablet{
+             flex-direction: row;
+             align-items: center;
+        }
+
+        label{
+            flex: 1;
+            font-size: 1.4rem;
+            color: $White;
+            font-weight: $bold;
+            text-align: end;
+            margin-right: 3rem;
+            margin-bottom: 1rem;
+
+            @include tablet{
+                margin-bottom: 0;
+            }
+            
+        }
+        .input-campo, .textarea{
+            flex: 2;
+            width: 100%;
+        }
+        input, textarea{
+            width: 100%;
+            padding: 1rem .5rem;
+            border-radius: .5rem;
+            border: none;
+            font-size: 1.5rem;
+            transition: all .3s ease;
+
+            &:hover{
+                box-shadow: .4rem .2rem .3rem $Black;
+            }
+        }
+        textarea{
+            height: 10rem;
+        }
+    }
+}
+.btnBorrar{
+    display: flex;
+    justify-content: center;
+
+    button{
+        font-size: 1.5rem;
+        background-color: rgb(32, 155, 177);
+        border: none;
+        color: $White;
+        padding: 1rem 1.5rem;
+        font-weight: $bold;
+        text-transform: uppercase;
+        transition: all .3s ease-in-out;
+
+        &:hover{
+            
+            background-color: darken(rgb(32, 155, 177), 7);
+        }
+    }
+}
+.citas-registradas{
+    margin-top: 5rem;
+    color: $White;
+    padding-left: 0;
+
+    @include tablet{
+        padding-left: 5rem;
+    }
+
+
+    .divCita{
+        width: 100%;
+        border-bottom: 1px solid $White;
+
+        p{
+            font-size: 1.5rem;
+            margin-bottom: .5rem;
+            margin-top: .5rem;
+        }
+        .contenido-negrita{
+            font-weight: 700;
+        }
+        .boton-eliminar{
+            background-color: rgb(187, 20, 20, .9);
+            border: none;
+            margin-bottom: .5rem;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            padding: .5rem 1rem;
+            transition: all .3s ease-in;
+            border-radius: .5rem;
+
+            &:hover{
+                box-shadow: .4rem .2rem .3rem $Black;
+            }
+        }
+        .editar{
+            background-color: rgb(22, 107, 26, .8);
+            margin-left: 1rem;
+        }
+
+    }
+}
